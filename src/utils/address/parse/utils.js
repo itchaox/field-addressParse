@@ -3,7 +3,7 @@
  * MIT License
  * By www.asseek.com
  */
-import AREA from '../area';
+import AREA from '../area.js';
 
 /**
  * 通过地区编码返回省市区对象
@@ -61,10 +61,13 @@ function getTargetParentAreaListByCode(target, code) {
 function getTargetAreaListByCode(target, code, parent) {
   if (parent) return getTargetParentAreaListByCode(target, code);
   let result = [];
-  let list = AREA[{
-    city: 'city_list',
-    area: 'area_list',
-  }[target]];
+  let list =
+    AREA[
+      {
+        city: 'city_list',
+        area: 'area_list',
+      }[target]
+    ];
   if (code && list) {
     code = code.toString();
     let provinceCode = code.slice(0, 2);
@@ -81,7 +84,8 @@ function getTargetAreaListByCode(target, code, parent) {
         }
       }
     } else {
-      for (let i = 0; i < 91; i++) {  //最大city编码只到91
+      for (let i = 0; i < 91; i++) {
+        //最大city编码只到91
         //只有city跟area
         code = `${provinceCode}${i < 10 ? '0' : ''}${i}${target === 'city' ? '00' : ''}`;
         if (target === 'city') {
@@ -123,8 +127,8 @@ function getTargetAreaListByCode(target, code, parent) {
  * @param area
  * @returns {{code: string, province: string, city: string, area: string}}
  */
-function getAreaByAddress({province, city, area}) {
-  const {province_list, city_list, area_list} = AREA;
+function getAreaByAddress({ province, city, area }) {
+  const { province_list, city_list, area_list } = AREA;
   const result = {
     code: '',
     province: '',
@@ -172,7 +176,8 @@ function getAreaByAddress({province, city, area}) {
  * @returns {number}
  */
 function strLen(str) {
-  let l = str.length, len = 0;
+  let l = str.length,
+    len = 0;
   for (let i = 0; i < l; i++) {
     len += (str.charCodeAt(i) & 0xff00) !== 0 ? 2 : 1;
   }
@@ -200,7 +205,7 @@ function shortIndexOf(address, shortName, name) {
       }
     }
   }
-  return {index, matchName};
+  return { index, matchName };
 }
 
 const Utils = {

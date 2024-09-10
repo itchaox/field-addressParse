@@ -8,8 +8,11 @@ import area from './area.js';
  */
 (() => {
   const list = Array.from(document.querySelectorAll('tr'))
-    .map(el => [(el.children[1] ? el.children[1].innerText : '').trim(), (el.children[2] ? el.children[2].innerText : '').trim()])
-    .filter(ary => ary[0] && ary[0] !== '行政区划代码');
+    .map((el) => [
+      (el.children[1] ? el.children[1].innerText : '').trim(),
+      (el.children[2] ? el.children[2].innerText : '').trim(),
+    ])
+    .filter((ary) => ary[0] && ary[0] !== '行政区划代码');
   const updateList = [];
   const newList = [];
   /*const delList = [];
@@ -26,7 +29,8 @@ import area from './area.js';
     }
   }*/
   for (const [code, name] of list) {
-    const targetData = code.substr(2) === '0000' ? area.province_list : code.substr(4) === '00' ? area.city_list : area.area_list;
+    const targetData =
+      code.substr(2) === '0000' ? area.province_list : code.substr(4) === '00' ? area.city_list : area.area_list;
     if (!targetData[code]) {
       newList.push([code, name]);
       targetData[code] = name;

@@ -3,7 +3,7 @@
  * MIT License
  * By www.asseek.com
  */
-import AREA from '../area';
+import AREA from '../area.js';
 import Utils from './utils';
 import ParseArea from './parse-area';
 
