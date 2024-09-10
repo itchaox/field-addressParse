@@ -2,7 +2,7 @@
   "name": "field-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "block-basekit-cli start:field",
     "build": "block-basekit-cli build:field",

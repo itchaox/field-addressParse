@@ -11,16 +11,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "lib": [
-      "ES2020"
-    ],
+    "lib": ["ES2020", "dom", "es2015", "es2016", "es2017"],
     "allowJs": true,
     "checkJs": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules/**"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/**"]
 }

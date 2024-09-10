@@ -1,4 +1,12 @@
-import area from './area.js';
+/*
+ * @Version    : v1.00
+ * @Author     : Wang Chao
+ * @Date       : 2024-09-10 16:17
+ * @LastAuthor : Wang Chao
+ * @LastTime   : 2024-09-10 19:33
+ * @desc       :
+ */
+import area from './area';
 
 /**
  * 民政部行政区划代码页面控制台执行

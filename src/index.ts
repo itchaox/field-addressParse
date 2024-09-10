@@ -129,7 +129,7 @@ basekit.addField({
     },
   },
   // formItemParams 为运行时传入的字段参数，对应字段配置里的 formItems （如引用的依赖字段）
-  execute: async (formItemParams: { source: { type: string; text: string }[] }) => {
+  execute: async (formItemParams) => {
     const { source } = formItemParams;
 
     // 数字类型 source 直接为值

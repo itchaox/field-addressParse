@@ -3,7 +3,7 @@
  * MIT License
  * By www.asseek.com
  */
-import Parse, { AREA, Utils } from './parse/index.js';
+import Parse, { AREA, Utils } from './parse/index';
 
 /**
  * 地址列表解析验证
