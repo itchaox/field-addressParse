@@ -30,6 +30,9 @@ class ParseAddress {
     ',',
     '。',
     '、',
+    '-',
+    '_',
+    '/',
   ];
 
   static ParseArea = new ParseArea();
@@ -98,6 +101,7 @@ class ParseAddress {
    */
   replace() {
     let { address } = this;
+    console.log('🚀  address:', address);
     for (let key of ParseAddress.ExcludeKeys) {
       address = address.replace(new RegExp(key, 'g'), ' ');
     }

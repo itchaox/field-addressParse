@@ -134,7 +134,7 @@ basekit.addField({
 
     // 数字类型 source 直接为值
     //  文本类型 source 为 [{ type: 'text , text '8'}]
-    const valueStr = Array.isArray(source) && source.length > 0 && source[0].text.split(' ').join('');
+    const valueStr = Array.isArray(source) && source.length > 0 && source.map((item) => item.text).join('');
     const [result] = AddressParse.parse(valueStr);
 
     let phoneStr = result.mobile || result.phone;
