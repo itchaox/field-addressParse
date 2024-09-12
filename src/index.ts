@@ -75,7 +75,8 @@ basekit.addField({
     type: FieldType.Object,
     extra: {
       icon: {
-        light: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/eqgeh7upeubqnulog/chatbot.svg',
+        light:
+          'https://lf3-static.bytednsdoc.com/obj/eden-cn/abjayvoz/ljhwZthlaukjlkulzlp/2024q3/Group%201321317613.png',
       },
       properties: [
         {
