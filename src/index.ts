@@ -147,7 +147,7 @@ basekit.addField({
       return {
         code: FieldCode.Success,
         data: {
-          person: result.name,
+          person: result.name || '-',
           phone: phoneStr,
           area: `${result.province}${result.city}${result.area}`,
           address: result.details,
