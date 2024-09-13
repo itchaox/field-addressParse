@@ -76,7 +76,7 @@ basekit.addField({
     extra: {
       icon: {
         light:
-          'https://lf3-static.bytednsdoc.com/obj/eden-cn/abjayvoz/ljhwZthlaukjlkulzlp/2024q3/Group%201321317613.png',
+          'https://lf3-static.bytednsdoc.com/obj/eden-cn/abjayvoz/ljhwZthlaukjlkulzlp/2024q3/dizhizhinengjiexi.png?x-resource-account=public',
       },
       properties: [
         {
